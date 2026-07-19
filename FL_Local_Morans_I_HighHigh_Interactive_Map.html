@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c33bbed9f2759e1cb8d42ce487d9fd2a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 210px;
+    z-index: 9999;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 13px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+">
+    <b>High-High Cluster Map</b><br>
+    <span style="
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: red;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 6px;
+    "></span>
+    High-High cluster
+</div>
+    
+            <div class="folium-map" id="map_c33bbed9f2759e1cb8d42ce487d9fd2a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c33bbed9f2759e1cb8d42ce487d9fd2a = L.map(
+                "map_c33bbed9f2759e1cb8d42ce487d9fd2a",
+                {
+                    center: [26.781805401750034, -81.39007931069136],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1617f81769380a36d251b13511e7659f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1617f81769380a36d251b13511e7659f.addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+            var circle_marker_cdc13dafe523aaa19d27d2282b63998e = L.circleMarker(
+                [28.056871569500032, -82.54837028539174],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_44e49b05b1cdc14f89539a9dc43fc00f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc899006fe4fe1bfa25a4bd18e13004f = $(`<div id="html_bc899006fe4fe1bfa25a4bd18e13004f" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 19<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 1.759<br>             <b>Rounded Cases:</b> 2<br>             <b>Exposed Population:</b> 697<br>             <b>Local Moran's I:</b> 0.0821<br>             <b>p-value:</b> 0.026<br>             </div>`)[0];
+                popup_44e49b05b1cdc14f89539a9dc43fc00f.setContent(html_bc899006fe4fe1bfa25a4bd18e13004f);
+            
+        
+
+        circle_marker_cdc13dafe523aaa19d27d2282b63998e.bindPopup(popup_44e49b05b1cdc14f89539a9dc43fc00f)
+        ;
+
+        
+    
+    
+            circle_marker_cdc13dafe523aaa19d27d2282b63998e.bindTooltip(
+                `<div>
+                     High-High | Cases: 1.759
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1093a466eae34ee409ad352209607171 = L.circleMarker(
+                [26.26880248700004, -80.21171650936806],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_4bbced7b9de39225a5be0a30cbe2a294 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9d1f5c25c75c9b4e63fd86c0f3664c9e = $(`<div id="html_9d1f5c25c75c9b4e63fd86c0f3664c9e" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 22<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 3.173<br>             <b>Rounded Cases:</b> 3<br>             <b>Exposed Population:</b> 1257<br>             <b>Local Moran's I:</b> 0.4592<br>             <b>p-value:</b> 0.018<br>             </div>`)[0];
+                popup_4bbced7b9de39225a5be0a30cbe2a294.setContent(html_9d1f5c25c75c9b4e63fd86c0f3664c9e);
+            
+        
+
+        circle_marker_1093a466eae34ee409ad352209607171.bindPopup(popup_4bbced7b9de39225a5be0a30cbe2a294)
+        ;
+
+        
+    
+    
+            circle_marker_1093a466eae34ee409ad352209607171.bindTooltip(
+                `<div>
+                     High-High | Cases: 3.173
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_612e20b61a21e6ca73a85573010caab0 = L.circleMarker(
+                [25.808070608000065, -80.37779290726168],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_80caa15929826462a3dd73add6c744d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9113aa20b6016e489f4028f81f7db40e = $(`<div id="html_9113aa20b6016e489f4028f81f7db40e" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 54<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 3.88<br>             <b>Rounded Cases:</b> 4<br>             <b>Exposed Population:</b> 1537<br>             <b>Local Moran's I:</b> 0.8569<br>             <b>p-value:</b> 0.013<br>             </div>`)[0];
+                popup_80caa15929826462a3dd73add6c744d1.setContent(html_9113aa20b6016e489f4028f81f7db40e);
+            
+        
+
+        circle_marker_612e20b61a21e6ca73a85573010caab0.bindPopup(popup_80caa15929826462a3dd73add6c744d1)
+        ;
+
+        
+    
+    
+            circle_marker_612e20b61a21e6ca73a85573010caab0.bindTooltip(
+                `<div>
+                     High-High | Cases: 3.88
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5046e6ffe7e3cbfd418704569a0f6cd = L.circleMarker(
+                [25.80612624150004, -80.2339953824117],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_0e12a1e0243a4bd7f450e69a2fc76eee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_264cb91650fbc80adf8169eb995e5a77 = $(`<div id="html_264cb91650fbc80adf8169eb995e5a77" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 55<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 21.997<br>             <b>Rounded Cases:</b> 22<br>             <b>Exposed Population:</b> 8715<br>             <b>Local Moran's I:</b> 36.7819<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_0e12a1e0243a4bd7f450e69a2fc76eee.setContent(html_264cb91650fbc80adf8169eb995e5a77);
+            
+        
+
+        circle_marker_e5046e6ffe7e3cbfd418704569a0f6cd.bindPopup(popup_0e12a1e0243a4bd7f450e69a2fc76eee)
+        ;
+
+        
+    
+    
+            circle_marker_e5046e6ffe7e3cbfd418704569a0f6cd.bindTooltip(
+                `<div>
+                     High-High | Cases: 21.997
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36c4f04d251f54f2f438a07c3cd41b7c = L.circleMarker(
+                [25.832841772500043, -80.39050421606105],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_f2661b46a8f4d58140924374f9e5bd8a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc21425fcf274c02365bf36153dbb556 = $(`<div id="html_cc21425fcf274c02365bf36153dbb556" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 56<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.562<br>             <b>Rounded Cases:</b> 3<br>             <b>Exposed Population:</b> 1015<br>             <b>Local Moran's I:</b> 0.3354<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_f2661b46a8f4d58140924374f9e5bd8a.setContent(html_cc21425fcf274c02365bf36153dbb556);
+            
+        
+
+        circle_marker_36c4f04d251f54f2f438a07c3cd41b7c.bindPopup(popup_f2661b46a8f4d58140924374f9e5bd8a)
+        ;
+
+        
+    
+    
+            circle_marker_36c4f04d251f54f2f438a07c3cd41b7c.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.562
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75cd50d8000566ab8850a2d91ff0a730 = L.circleMarker(
+                [25.655546259500053, -80.2779993397393],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_69eaba7820012faf582b79f7a66e650d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f2a7b45204cc46c4b35a3a629d77115f = $(`<div id="html_f2a7b45204cc46c4b35a3a629d77115f" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 57<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 1.954<br>             <b>Rounded Cases:</b> 2<br>             <b>Exposed Population:</b> 774<br>             <b>Local Moran's I:</b> 0.1298<br>             <b>p-value:</b> 0.02<br>             </div>`)[0];
+                popup_69eaba7820012faf582b79f7a66e650d.setContent(html_f2a7b45204cc46c4b35a3a629d77115f);
+            
+        
+
+        circle_marker_75cd50d8000566ab8850a2d91ff0a730.bindPopup(popup_69eaba7820012faf582b79f7a66e650d)
+        ;
+
+        
+    
+    
+            circle_marker_75cd50d8000566ab8850a2d91ff0a730.bindTooltip(
+                `<div>
+                     High-High | Cases: 1.954
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_535be3e8cbf31b7cba5d93461f02b85b = L.circleMarker(
+                [25.85530942850005, -80.18207801311819],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_29eb4ea13e42f3c939b4e6475a3da853 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_355830dbd2a077956614c151a7ec7696 = $(`<div id="html_355830dbd2a077956614c151a7ec7696" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 58<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.251<br>             <b>Rounded Cases:</b> 2<br>             <b>Exposed Population:</b> 892<br>             <b>Local Moran's I:</b> 0.7705<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_29eb4ea13e42f3c939b4e6475a3da853.setContent(html_355830dbd2a077956614c151a7ec7696);
+            
+        
+
+        circle_marker_535be3e8cbf31b7cba5d93461f02b85b.bindPopup(popup_29eb4ea13e42f3c939b4e6475a3da853)
+        ;
+
+        
+    
+    
+            circle_marker_535be3e8cbf31b7cba5d93461f02b85b.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.251
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ddca9048aafb938f6e45544ddc9bb27c = L.circleMarker(
+                [25.771642989500066, -80.19970927742207],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_8b328c4370bc3f5560fe239b85b89ea5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89671786640bf07c0c6e1d9986a73411 = $(`<div id="html_89671786640bf07c0c6e1d9986a73411" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 59<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 46.908<br>             <b>Rounded Cases:</b> 47<br>             <b>Exposed Population:</b> 18584<br>             <b>Local Moran's I:</b> 71.8857<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_8b328c4370bc3f5560fe239b85b89ea5.setContent(html_89671786640bf07c0c6e1d9986a73411);
+            
+        
+
+        circle_marker_ddca9048aafb938f6e45544ddc9bb27c.bindPopup(popup_8b328c4370bc3f5560fe239b85b89ea5)
+        ;
+
+        
+    
+    
+            circle_marker_ddca9048aafb938f6e45544ddc9bb27c.bindTooltip(
+                `<div>
+                     High-High | Cases: 46.908
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adf0299588172a3facad6e1b097e4225 = L.circleMarker(
+                [26.560000470500057, -81.89753727754142],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_e8af637ea373ef44e130242867613dbf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b76aef2f6aac29e5838491514edc0f01 = $(`<div id="html_b76aef2f6aac29e5838491514edc0f01" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 60<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 6.646<br>             <b>Rounded Cases:</b> 7<br>             <b>Exposed Population:</b> 2633<br>             <b>Local Moran's I:</b> 0.901<br>             <b>p-value:</b> 0.029<br>             </div>`)[0];
+                popup_e8af637ea373ef44e130242867613dbf.setContent(html_b76aef2f6aac29e5838491514edc0f01);
+            
+        
+
+        circle_marker_adf0299588172a3facad6e1b097e4225.bindPopup(popup_e8af637ea373ef44e130242867613dbf)
+        ;
+
+        
+    
+    
+            circle_marker_adf0299588172a3facad6e1b097e4225.bindTooltip(
+                `<div>
+                     High-High | Cases: 6.646
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_34154a7cf06f3eb450130cec575e02bd = L.circleMarker(
+                [25.761079710000047, -80.19012923884655],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_64610727f1a2d43d5377d62bafec0e1c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3815a6b21fdc2ac0c8596d16165599e3 = $(`<div id="html_3815a6b21fdc2ac0c8596d16165599e3" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 96<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 78.191<br>             <b>Rounded Cases:</b> 78<br>             <b>Exposed Population:</b> 30978<br>             <b>Local Moran's I:</b> 88.1006<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_64610727f1a2d43d5377d62bafec0e1c.setContent(html_3815a6b21fdc2ac0c8596d16165599e3);
+            
+        
+
+        circle_marker_34154a7cf06f3eb450130cec575e02bd.bindPopup(popup_64610727f1a2d43d5377d62bafec0e1c)
+        ;
+
+        
+    
+    
+            circle_marker_34154a7cf06f3eb450130cec575e02bd.bindTooltip(
+                `<div>
+                     High-High | Cases: 78.191
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ce1a883c917ed102f784551b3679926 = L.circleMarker(
+                [25.845200083000066, -80.12582124061987],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_d00e8d222ebfe67f9a1dceb451bdbf3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_90333f07a749893af6cfc4bf07905d7d = $(`<div id="html_90333f07a749893af6cfc4bf07905d7d" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 98<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 11.315<br>             <b>Rounded Cases:</b> 11<br>             <b>Exposed Population:</b> 4483<br>             <b>Local Moran's I:</b> 17.5808<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_d00e8d222ebfe67f9a1dceb451bdbf3f.setContent(html_90333f07a749893af6cfc4bf07905d7d);
+            
+        
+
+        circle_marker_6ce1a883c917ed102f784551b3679926.bindPopup(popup_d00e8d222ebfe67f9a1dceb451bdbf3f)
+        ;
+
+        
+    
+    
+            circle_marker_6ce1a883c917ed102f784551b3679926.bindTooltip(
+                `<div>
+                     High-High | Cases: 11.315
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2748ca9a08c430b29a15c36792f82d6d = L.circleMarker(
+                [26.017091770000064, -80.13781407223712],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_71131c16f455d6a616e08c644b17a6eb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ebd0328edadcb3148ce41e367f3f6720 = $(`<div id="html_ebd0328edadcb3148ce41e367f3f6720" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 110<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 10.861<br>             <b>Rounded Cases:</b> 11<br>             <b>Exposed Population:</b> 4303<br>             <b>Local Moran's I:</b> 3.5952<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_71131c16f455d6a616e08c644b17a6eb.setContent(html_ebd0328edadcb3148ce41e367f3f6720);
+            
+        
+
+        circle_marker_2748ca9a08c430b29a15c36792f82d6d.bindPopup(popup_71131c16f455d6a616e08c644b17a6eb)
+        ;
+
+        
+    
+    
+            circle_marker_2748ca9a08c430b29a15c36792f82d6d.bindTooltip(
+                `<div>
+                     High-High | Cases: 10.861
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e92f16da10486f99b9fec88855cba5c = L.circleMarker(
+                [26.134128086000032, -80.15698231394728],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_d0355e97f06f52e19aadca1e4aa57fe2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5dc2a03699f30581b0d7cdaa89ee717d = $(`<div id="html_5dc2a03699f30581b0d7cdaa89ee717d" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 112<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 17.467<br>             <b>Rounded Cases:</b> 17<br>             <b>Exposed Population:</b> 6920<br>             <b>Local Moran's I:</b> 4.1911<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_d0355e97f06f52e19aadca1e4aa57fe2.setContent(html_5dc2a03699f30581b0d7cdaa89ee717d);
+            
+        
+
+        circle_marker_8e92f16da10486f99b9fec88855cba5c.bindPopup(popup_d0355e97f06f52e19aadca1e4aa57fe2)
+        ;
+
+        
+    
+    
+            circle_marker_8e92f16da10486f99b9fec88855cba5c.bindTooltip(
+                `<div>
+                     High-High | Cases: 17.467
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ff4688e822b23279e72609989bf19a6 = L.circleMarker(
+                [26.020097766500072, -80.13381260925347],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_4b9f7b17a76e9c43d10ce00a9c887415 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ad1a5d20442639e41150343cfd96c57a = $(`<div id="html_ad1a5d20442639e41150343cfd96c57a" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 113<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 10.682<br>             <b>Rounded Cases:</b> 11<br>             <b>Exposed Population:</b> 4232<br>             <b>Local Moran's I:</b> 3.5413<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_4b9f7b17a76e9c43d10ce00a9c887415.setContent(html_ad1a5d20442639e41150343cfd96c57a);
+            
+        
+
+        circle_marker_3ff4688e822b23279e72609989bf19a6.bindPopup(popup_4b9f7b17a76e9c43d10ce00a9c887415)
+        ;
+
+        
+    
+    
+            circle_marker_3ff4688e822b23279e72609989bf19a6.bindTooltip(
+                `<div>
+                     High-High | Cases: 10.682
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dadba5884657b1f0b990f4f70af6ba43 = L.circleMarker(
+                [25.763852696500063, -80.18908158289798],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_b9922cc46c165a4a27115703841ec7e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_616dd145fe6a45027050bed608233290 = $(`<div id="html_616dd145fe6a45027050bed608233290" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 115<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 74.221<br>             <b>Rounded Cases:</b> 74<br>             <b>Exposed Population:</b> 29405<br>             <b>Local Moran's I:</b> 85.8902<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_b9922cc46c165a4a27115703841ec7e0.setContent(html_616dd145fe6a45027050bed608233290);
+            
+        
+
+        circle_marker_dadba5884657b1f0b990f4f70af6ba43.bindPopup(popup_b9922cc46c165a4a27115703841ec7e0)
+        ;
+
+        
+    
+    
+            circle_marker_dadba5884657b1f0b990f4f70af6ba43.bindTooltip(
+                `<div>
+                     High-High | Cases: 74.221
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7634d22c8149a8c67d72ab6316cecaf6 = L.circleMarker(
+                [25.679535194000042, -80.47519144167075],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_1080ba5a0ff680e7b2f3be945f0b5d06 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34ccd241b7dea92139635ff7ced7e380 = $(`<div id="html_34ccd241b7dea92139635ff7ced7e380" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 164<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 11.568<br>             <b>Rounded Cases:</b> 12<br>             <b>Exposed Population:</b> 4583<br>             <b>Local Moran's I:</b> 3.3377<br>             <b>p-value:</b> 0.015<br>             </div>`)[0];
+                popup_1080ba5a0ff680e7b2f3be945f0b5d06.setContent(html_34ccd241b7dea92139635ff7ced7e380);
+            
+        
+
+        circle_marker_7634d22c8149a8c67d72ab6316cecaf6.bindPopup(popup_1080ba5a0ff680e7b2f3be945f0b5d06)
+        ;
+
+        
+    
+    
+            circle_marker_7634d22c8149a8c67d72ab6316cecaf6.bindTooltip(
+                `<div>
+                     High-High | Cases: 11.568
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85199729c0ff045d4cda25e4506e487f = L.circleMarker(
+                [26.123132836000053, -80.38155813280564],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_7b7a0fd108383f440660b19df6ac4928 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d987afdb30eca65cf2fc2ee6b5bc8044 = $(`<div id="html_d987afdb30eca65cf2fc2ee6b5bc8044" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 165<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.327<br>             <b>Rounded Cases:</b> 2<br>             <b>Exposed Population:</b> 922<br>             <b>Local Moran's I:</b> 0.252<br>             <b>p-value:</b> 0.017<br>             </div>`)[0];
+                popup_7b7a0fd108383f440660b19df6ac4928.setContent(html_d987afdb30eca65cf2fc2ee6b5bc8044);
+            
+        
+
+        circle_marker_85199729c0ff045d4cda25e4506e487f.bindPopup(popup_7b7a0fd108383f440660b19df6ac4928)
+        ;
+
+        
+    
+    
+            circle_marker_85199729c0ff045d4cda25e4506e487f.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.327
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71fb577b4dc356a39f28c709cb6f43b1 = L.circleMarker(
+                [25.556363239000035, -80.36859999999996],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_d85535ccd15643054855d5f550f6155a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a16eb36403d4a7ebef4c8549175fc73 = $(`<div id="html_7a16eb36403d4a7ebef4c8549175fc73" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 175<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 20.917<br>             <b>Rounded Cases:</b> 21<br>             <b>Exposed Population:</b> 8287<br>             <b>Local Moran's I:</b> 7.6469<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_d85535ccd15643054855d5f550f6155a.setContent(html_7a16eb36403d4a7ebef4c8549175fc73);
+            
+        
+
+        circle_marker_71fb577b4dc356a39f28c709cb6f43b1.bindPopup(popup_d85535ccd15643054855d5f550f6155a)
+        ;
+
+        
+    
+    
+            circle_marker_71fb577b4dc356a39f28c709cb6f43b1.bindTooltip(
+                `<div>
+                     High-High | Cases: 20.917
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44550ce7c74bee868584396d57f0700a = L.circleMarker(
+                [26.528563216000038, -81.89399999999993],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_bcc7cb73f38ba012c3194432ee3df1bc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3e3fcdda1564157c1044a1600617c7d = $(`<div id="html_a3e3fcdda1564157c1044a1600617c7d" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 231<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 9.71<br>             <b>Rounded Cases:</b> 10<br>             <b>Exposed Population:</b> 3847<br>             <b>Local Moran's I:</b> 1.8026<br>             <b>p-value:</b> 0.018<br>             </div>`)[0];
+                popup_bcc7cb73f38ba012c3194432ee3df1bc.setContent(html_a3e3fcdda1564157c1044a1600617c7d);
+            
+        
+
+        circle_marker_44550ce7c74bee868584396d57f0700a.bindPopup(popup_bcc7cb73f38ba012c3194432ee3df1bc)
+        ;
+
+        
+    
+    
+            circle_marker_44550ce7c74bee868584396d57f0700a.bindTooltip(
+                `<div>
+                     High-High | Cases: 9.71
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f894e1f57611722eff8ed93fdac7911f = L.circleMarker(
+                [25.948795351000058, -80.33999999999996],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_3a266ac3d791fac188cad190038b3257 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d884b1d35d80b782601ac2b8ee0ebf20 = $(`<div id="html_d884b1d35d80b782601ac2b8ee0ebf20" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 283<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 21.119<br>             <b>Rounded Cases:</b> 21<br>             <b>Exposed Population:</b> 8367<br>             <b>Local Moran's I:</b> 8.2703<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_3a266ac3d791fac188cad190038b3257.setContent(html_d884b1d35d80b782601ac2b8ee0ebf20);
+            
+        
+
+        circle_marker_f894e1f57611722eff8ed93fdac7911f.bindPopup(popup_3a266ac3d791fac188cad190038b3257)
+        ;
+
+        
+    
+    
+            circle_marker_f894e1f57611722eff8ed93fdac7911f.bindTooltip(
+                `<div>
+                     High-High | Cases: 21.119
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65ee0d612e880f4d45905e7911074e05 = L.circleMarker(
+                [25.879347986000056, -80.35147154499676],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_0724c7b6efe2a4b2db7ae8db2f4c8605 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a5f4e6918b7019b6475e8bfca16097a = $(`<div id="html_7a5f4e6918b7019b6475e8bfca16097a" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 284<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 8.549<br>             <b>Rounded Cases:</b> 9<br>             <b>Exposed Population:</b> 3387<br>             <b>Local Moran's I:</b> 1.9834<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_0724c7b6efe2a4b2db7ae8db2f4c8605.setContent(html_7a5f4e6918b7019b6475e8bfca16097a);
+            
+        
+
+        circle_marker_65ee0d612e880f4d45905e7911074e05.bindPopup(popup_0724c7b6efe2a4b2db7ae8db2f4c8605)
+        ;
+
+        
+    
+    
+            circle_marker_65ee0d612e880f4d45905e7911074e05.bindTooltip(
+                `<div>
+                     High-High | Cases: 8.549
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_84371100c95e8b70cf7af0228a852c1f = L.circleMarker(
+                [25.903967781500057, -80.31226803218587],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_8a2eab8da2679e0384aa6908d6ccd76c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41e4f9daf8f052a5ab727b68ee73f61d = $(`<div id="html_41e4f9daf8f052a5ab727b68ee73f61d" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 287<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 4.677<br>             <b>Rounded Cases:</b> 5<br>             <b>Exposed Population:</b> 1853<br>             <b>Local Moran's I:</b> 1.0285<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_8a2eab8da2679e0384aa6908d6ccd76c.setContent(html_41e4f9daf8f052a5ab727b68ee73f61d);
+            
+        
+
+        circle_marker_84371100c95e8b70cf7af0228a852c1f.bindPopup(popup_8a2eab8da2679e0384aa6908d6ccd76c)
+        ;
+
+        
+    
+    
+            circle_marker_84371100c95e8b70cf7af0228a852c1f.bindTooltip(
+                `<div>
+                     High-High | Cases: 4.677
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0e7d11a7a4ac5b12f0046e87e16be39 = L.circleMarker(
+                [26.17998782200007, -80.13638597962307],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_f3da9ad6c2714930e15f7b6a52e73ab6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8c54c61593ec0c5b6d2c8973399eb563 = $(`<div id="html_8c54c61593ec0c5b6d2c8973399eb563" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 288<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 15.465<br>             <b>Rounded Cases:</b> 15<br>             <b>Exposed Population:</b> 6127<br>             <b>Local Moran's I:</b> 3.901<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_f3da9ad6c2714930e15f7b6a52e73ab6.setContent(html_8c54c61593ec0c5b6d2c8973399eb563);
+            
+        
+
+        circle_marker_b0e7d11a7a4ac5b12f0046e87e16be39.bindPopup(popup_f3da9ad6c2714930e15f7b6a52e73ab6)
+        ;
+
+        
+    
+    
+            circle_marker_b0e7d11a7a4ac5b12f0046e87e16be39.bindTooltip(
+                `<div>
+                     High-High | Cases: 15.465
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab54ea99a6780eb401e4174b87f81dcd = L.circleMarker(
+                [25.666801822500044, -80.39550440992429],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_cc2527777b5e10de5465022c9540154e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_639a9f9ca37e54fa889406bc4f922c1e = $(`<div id="html_639a9f9ca37e54fa889406bc4f922c1e" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 299<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 12.459<br>             <b>Rounded Cases:</b> 12<br>             <b>Exposed Population:</b> 4936<br>             <b>Local Moran's I:</b> 3.4489<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_cc2527777b5e10de5465022c9540154e.setContent(html_639a9f9ca37e54fa889406bc4f922c1e);
+            
+        
+
+        circle_marker_ab54ea99a6780eb401e4174b87f81dcd.bindPopup(popup_cc2527777b5e10de5465022c9540154e)
+        ;
+
+        
+    
+    
+            circle_marker_ab54ea99a6780eb401e4174b87f81dcd.bindTooltip(
+                `<div>
+                     High-High | Cases: 12.459
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ce6bfa8dc8d0d219a26d03ca65f9f95f = L.circleMarker(
+                [25.690250465000048, -80.3413574516037],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_70c1731dc6ddba283c6d56707d29afa3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3804e831eeede0975d2c3073c73b5bdc = $(`<div id="html_3804e831eeede0975d2c3073c73b5bdc" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 300<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 5.616<br>             <b>Rounded Cases:</b> 6<br>             <b>Exposed Population:</b> 2225<br>             <b>Local Moran's I:</b> 1.0717<br>             <b>p-value:</b> 0.018<br>             </div>`)[0];
+                popup_70c1731dc6ddba283c6d56707d29afa3.setContent(html_3804e831eeede0975d2c3073c73b5bdc);
+            
+        
+
+        circle_marker_ce6bfa8dc8d0d219a26d03ca65f9f95f.bindPopup(popup_70c1731dc6ddba283c6d56707d29afa3)
+        ;
+
+        
+    
+    
+            circle_marker_ce6bfa8dc8d0d219a26d03ca65f9f95f.bindTooltip(
+                `<div>
+                     High-High | Cases: 5.616
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da89db57aada847e2b1054a1d0864219 = L.circleMarker(
+                [25.70927512150007, -80.37744670008672],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_a3fd354d2002314404c51f40b3491baa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fe9abd2a8fdabcca1fa21d4857afce0f = $(`<div id="html_fe9abd2a8fdabcca1fa21d4857afce0f" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 301<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 16.232<br>             <b>Rounded Cases:</b> 16<br>             <b>Exposed Population:</b> 6431<br>             <b>Local Moran's I:</b> 4.5419<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_a3fd354d2002314404c51f40b3491baa.setContent(html_fe9abd2a8fdabcca1fa21d4857afce0f);
+            
+        
+
+        circle_marker_da89db57aada847e2b1054a1d0864219.bindPopup(popup_a3fd354d2002314404c51f40b3491baa)
+        ;
+
+        
+    
+    
+            circle_marker_da89db57aada847e2b1054a1d0864219.bindTooltip(
+                `<div>
+                     High-High | Cases: 16.232
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7dd8c811a0a45de446a8091cb152159f = L.circleMarker(
+                [25.610294434000025, -80.42535100699578],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_bccbd1d18df63f377cef4cd5bf79c039 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_00e37609e8d0bf128ddabbf126e3ae23 = $(`<div id="html_00e37609e8d0bf128ddabbf126e3ae23" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 302<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 7.363<br>             <b>Rounded Cases:</b> 7<br>             <b>Exposed Population:</b> 2917<br>             <b>Local Moran's I:</b> 2.1202<br>             <b>p-value:</b> 0.011<br>             </div>`)[0];
+                popup_bccbd1d18df63f377cef4cd5bf79c039.setContent(html_00e37609e8d0bf128ddabbf126e3ae23);
+            
+        
+
+        circle_marker_7dd8c811a0a45de446a8091cb152159f.bindPopup(popup_bccbd1d18df63f377cef4cd5bf79c039)
+        ;
+
+        
+    
+    
+            circle_marker_7dd8c811a0a45de446a8091cb152159f.bindTooltip(
+                `<div>
+                     High-High | Cases: 7.363
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7498b95e3130812911936d169b88ace = L.circleMarker(
+                [25.639891048000067, -80.37166867744045],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_4d3ab584b7c8a0440ca5eda3c1eb8b75 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba64e2d4aad996f54081b8fca81987cd = $(`<div id="html_ba64e2d4aad996f54081b8fca81987cd" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 303<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 7.539<br>             <b>Rounded Cases:</b> 8<br>             <b>Exposed Population:</b> 2987<br>             <b>Local Moran's I:</b> 1.7771<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_4d3ab584b7c8a0440ca5eda3c1eb8b75.setContent(html_ba64e2d4aad996f54081b8fca81987cd);
+            
+        
+
+        circle_marker_b7498b95e3130812911936d169b88ace.bindPopup(popup_4d3ab584b7c8a0440ca5eda3c1eb8b75)
+        ;
+
+        
+    
+    
+            circle_marker_b7498b95e3130812911936d169b88ace.bindTooltip(
+                `<div>
+                     High-High | Cases: 7.539
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24cb7ba1cd7dac6d00f059c81e44b491 = L.circleMarker(
+                [25.62444810750003, -80.43551581288463],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_23959a58ce7de0dcc03527a7a9ea34c3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_885d2a2e3640ac43e02333c629e417fe = $(`<div id="html_885d2a2e3640ac43e02333c629e417fe" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 343<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 8.054<br>             <b>Rounded Cases:</b> 8<br>             <b>Exposed Population:</b> 3191<br>             <b>Local Moran's I:</b> 1.8149<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_23959a58ce7de0dcc03527a7a9ea34c3.setContent(html_885d2a2e3640ac43e02333c629e417fe);
+            
+        
+
+        circle_marker_24cb7ba1cd7dac6d00f059c81e44b491.bindPopup(popup_23959a58ce7de0dcc03527a7a9ea34c3)
+        ;
+
+        
+    
+    
+            circle_marker_24cb7ba1cd7dac6d00f059c81e44b491.bindTooltip(
+                `<div>
+                     High-High | Cases: 8.054
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ccbabc640679e03fa2503bdf41c6b0a3 = L.circleMarker(
+                [26.45263039750006, -81.95086572987736],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_d68fe9146f2ce3191820957264f8b9a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1d902f99144f4f0540a48de86c05af1f = $(`<div id="html_1d902f99144f4f0540a48de86c05af1f" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 402<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.168<br>             <b>Rounded Cases:</b> 2<br>             <b>Exposed Population:</b> 859<br>             <b>Local Moran's I:</b> 0.2255<br>             <b>p-value:</b> 0.018<br>             </div>`)[0];
+                popup_d68fe9146f2ce3191820957264f8b9a6.setContent(html_1d902f99144f4f0540a48de86c05af1f);
+            
+        
+
+        circle_marker_ccbabc640679e03fa2503bdf41c6b0a3.bindPopup(popup_d68fe9146f2ce3191820957264f8b9a6)
+        ;
+
+        
+    
+    
+            circle_marker_ccbabc640679e03fa2503bdf41c6b0a3.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.168
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95175285b3fa2149be5d6b984bb5d204 = L.circleMarker(
+                [26.56938756750006, -81.89735530913343],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_987b431bff2497d5657a6780b3236145 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_30552c6a260f3a34974dd609e2014cf7 = $(`<div id="html_30552c6a260f3a34974dd609e2014cf7" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 520<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 3.17<br>             <b>Rounded Cases:</b> 3<br>             <b>Exposed Population:</b> 1256<br>             <b>Local Moran's I:</b> 0.3669<br>             <b>p-value:</b> 0.024<br>             </div>`)[0];
+                popup_987b431bff2497d5657a6780b3236145.setContent(html_30552c6a260f3a34974dd609e2014cf7);
+            
+        
+
+        circle_marker_95175285b3fa2149be5d6b984bb5d204.bindPopup(popup_987b431bff2497d5657a6780b3236145)
+        ;
+
+        
+    
+    
+            circle_marker_95175285b3fa2149be5d6b984bb5d204.bindTooltip(
+                `<div>
+                     High-High | Cases: 3.17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f1466968c6d7b3ca9329cf8f1a7d124 = L.circleMarker(
+                [27.848937964000047, -82.65380936109835],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_03cf63c982c2e338de97d969a21a4429 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8cd836f28537291b9893dd87d828daa0 = $(`<div id="html_8cd836f28537291b9893dd87d828daa0" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 523<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 6.366<br>             <b>Rounded Cases:</b> 6<br>             <b>Exposed Population:</b> 2522<br>             <b>Local Moran's I:</b> 0.8501<br>             <b>p-value:</b> 0.029<br>             </div>`)[0];
+                popup_03cf63c982c2e338de97d969a21a4429.setContent(html_8cd836f28537291b9893dd87d828daa0);
+            
+        
+
+        circle_marker_7f1466968c6d7b3ca9329cf8f1a7d124.bindPopup(popup_03cf63c982c2e338de97d969a21a4429)
+        ;
+
+        
+    
+    
+            circle_marker_7f1466968c6d7b3ca9329cf8f1a7d124.bindTooltip(
+                `<div>
+                     High-High | Cases: 6.366
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90b35ce2c0017a6c398975977fb65757 = L.circleMarker(
+                [28.03004457700004, -82.65433738076284],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_a736d9266c1124bc31656b183f0e2283 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_947368e52122b67c52b43b90f33701f9 = $(`<div id="html_947368e52122b67c52b43b90f33701f9" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 535<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 4.897<br>             <b>Rounded Cases:</b> 5<br>             <b>Exposed Population:</b> 1940<br>             <b>Local Moran's I:</b> 0.7167<br>             <b>p-value:</b> 0.024<br>             </div>`)[0];
+                popup_a736d9266c1124bc31656b183f0e2283.setContent(html_947368e52122b67c52b43b90f33701f9);
+            
+        
+
+        circle_marker_90b35ce2c0017a6c398975977fb65757.bindPopup(popup_a736d9266c1124bc31656b183f0e2283)
+        ;
+
+        
+    
+    
+            circle_marker_90b35ce2c0017a6c398975977fb65757.bindTooltip(
+                `<div>
+                     High-High | Cases: 4.897
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e9e5e3ca375c8ea19bbba87135ecf16 = L.circleMarker(
+                [27.770000147000047, -82.63050488808815],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_de16cc348ce4db421e286eb954e52c39 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6b40baab30505e3b5f14cfe978aa420b = $(`<div id="html_6b40baab30505e3b5f14cfe978aa420b" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 581<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.905<br>             <b>Rounded Cases:</b> 3<br>             <b>Exposed Population:</b> 1151<br>             <b>Local Moran's I:</b> 0.2369<br>             <b>p-value:</b> 0.034<br>             </div>`)[0];
+                popup_de16cc348ce4db421e286eb954e52c39.setContent(html_6b40baab30505e3b5f14cfe978aa420b);
+            
+        
+
+        circle_marker_5e9e5e3ca375c8ea19bbba87135ecf16.bindPopup(popup_de16cc348ce4db421e286eb954e52c39)
+        ;
+
+        
+    
+    
+            circle_marker_5e9e5e3ca375c8ea19bbba87135ecf16.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.905
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19e6d88f4d4e2ce6b3fab4aa96399cf6 = L.circleMarker(
+                [28.02966259750005, -82.61025550447766],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_af9403f4f58c8a5e52bb0ccff356b50e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a6e42d155a94ca997f4b2a4b9fb1e8bb = $(`<div id="html_a6e42d155a94ca997f4b2a4b9fb1e8bb" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 604<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.93<br>             <b>Rounded Cases:</b> 3<br>             <b>Exposed Population:</b> 1161<br>             <b>Local Moran's I:</b> 0.3329<br>             <b>p-value:</b> 0.024<br>             </div>`)[0];
+                popup_af9403f4f58c8a5e52bb0ccff356b50e.setContent(html_a6e42d155a94ca997f4b2a4b9fb1e8bb);
+            
+        
+
+        circle_marker_19e6d88f4d4e2ce6b3fab4aa96399cf6.bindPopup(popup_af9403f4f58c8a5e52bb0ccff356b50e)
+        ;
+
+        
+    
+    
+            circle_marker_19e6d88f4d4e2ce6b3fab4aa96399cf6.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.93
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5a63abf953bf043f56e225d41c33887 = L.circleMarker(
+                [26.010533349500037, -80.29860017599353],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_4a4562fef899004b3dd6aee6e4bf180f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07edd6bbe75f21d3362aaa07967780f2 = $(`<div id="html_07edd6bbe75f21d3362aaa07967780f2" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 738<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 18.312<br>             <b>Rounded Cases:</b> 18<br>             <b>Exposed Population:</b> 7255<br>             <b>Local Moran's I:</b> 7.6842<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_4a4562fef899004b3dd6aee6e4bf180f.setContent(html_07edd6bbe75f21d3362aaa07967780f2);
+            
+        
+
+        circle_marker_b5a63abf953bf043f56e225d41c33887.bindPopup(popup_4a4562fef899004b3dd6aee6e4bf180f)
+        ;
+
+        
+    
+    
+            circle_marker_b5a63abf953bf043f56e225d41c33887.bindTooltip(
+                `<div>
+                     High-High | Cases: 18.312
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a217a906f7436f97685ed360a472a85 = L.circleMarker(
+                [25.506739234000037, -80.40855856501163],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_26d21beb4d401764b11ac1fe073f554b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a44fc90e1fee24276f20b77cc8a0df18 = $(`<div id="html_a44fc90e1fee24276f20b77cc8a0df18" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 741<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 17.78<br>             <b>Rounded Cases:</b> 18<br>             <b>Exposed Population:</b> 7044<br>             <b>Local Moran's I:</b> 4.6778<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_26d21beb4d401764b11ac1fe073f554b.setContent(html_a44fc90e1fee24276f20b77cc8a0df18);
+            
+        
+
+        circle_marker_2a217a906f7436f97685ed360a472a85.bindPopup(popup_26d21beb4d401764b11ac1fe073f554b)
+        ;
+
+        
+    
+    
+            circle_marker_2a217a906f7436f97685ed360a472a85.bindTooltip(
+                `<div>
+                     High-High | Cases: 17.78
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56573ef0710deb71d4467da882cde939 = L.circleMarker(
+                [25.59913260050004, -80.33421216382544],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_6b5fca756f485724bd6856a7e01ae14c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b1c0de77bf8e7b4a6bfc6153ee3c6e0 = $(`<div id="html_1b1c0de77bf8e7b4a6bfc6153ee3c6e0" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 750<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 8.324<br>             <b>Rounded Cases:</b> 8<br>             <b>Exposed Population:</b> 3298<br>             <b>Local Moran's I:</b> 2.5632<br>             <b>p-value:</b> 0.008<br>             </div>`)[0];
+                popup_6b5fca756f485724bd6856a7e01ae14c.setContent(html_1b1c0de77bf8e7b4a6bfc6153ee3c6e0);
+            
+        
+
+        circle_marker_56573ef0710deb71d4467da882cde939.bindPopup(popup_6b5fca756f485724bd6856a7e01ae14c)
+        ;
+
+        
+    
+    
+            circle_marker_56573ef0710deb71d4467da882cde939.bindTooltip(
+                `<div>
+                     High-High | Cases: 8.324
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ecbdca68b228fd2de9c2a6481c4e4d1 = L.circleMarker(
+                [25.586872857500026, -80.31941116076358],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_7449abbfbdd016a5bbfa963bdc5dceba = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78ffc122f98d1f821dc3be75201f5005 = $(`<div id="html_78ffc122f98d1f821dc3be75201f5005" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 751<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 9.354<br>             <b>Rounded Cases:</b> 9<br>             <b>Exposed Population:</b> 3706<br>             <b>Local Moran's I:</b> 2.8724<br>             <b>p-value:</b> 0.009<br>             </div>`)[0];
+                popup_7449abbfbdd016a5bbfa963bdc5dceba.setContent(html_78ffc122f98d1f821dc3be75201f5005);
+            
+        
+
+        circle_marker_6ecbdca68b228fd2de9c2a6481c4e4d1.bindPopup(popup_7449abbfbdd016a5bbfa963bdc5dceba)
+        ;
+
+        
+    
+    
+            circle_marker_6ecbdca68b228fd2de9c2a6481c4e4d1.bindTooltip(
+                `<div>
+                     High-High | Cases: 9.354
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a40b25c59579f4d9c6497772990c1a44 = L.circleMarker(
+                [26.20809804750004, -80.1289736528267],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_b42ac64a678335ce7d1a2469467ac7cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b4b2fe7bb17dc0ffbbe625f1486034b8 = $(`<div id="html_b4b2fe7bb17dc0ffbbe625f1486034b8" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 754<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 10.212<br>             <b>Rounded Cases:</b> 10<br>             <b>Exposed Population:</b> 4046<br>             <b>Local Moran's I:</b> 2.8012<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_b42ac64a678335ce7d1a2469467ac7cf.setContent(html_b4b2fe7bb17dc0ffbbe625f1486034b8);
+            
+        
+
+        circle_marker_a40b25c59579f4d9c6497772990c1a44.bindPopup(popup_b42ac64a678335ce7d1a2469467ac7cf)
+        ;
+
+        
+    
+    
+            circle_marker_a40b25c59579f4d9c6497772990c1a44.bindTooltip(
+                `<div>
+                     High-High | Cases: 10.212
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f06a560471d999dc26b1132698f893b0 = L.circleMarker(
+                [25.78297977200006, -80.24045097400654],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_5137b88521629cbf81d5d37a44330aa7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3a70558476bb5b6ac2507e11348521f = $(`<div id="html_b3a70558476bb5b6ac2507e11348521f" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 755<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 4.874<br>             <b>Rounded Cases:</b> 5<br>             <b>Exposed Population:</b> 1931<br>             <b>Local Moran's I:</b> 6.8356<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_5137b88521629cbf81d5d37a44330aa7.setContent(html_b3a70558476bb5b6ac2507e11348521f);
+            
+        
+
+        circle_marker_f06a560471d999dc26b1132698f893b0.bindPopup(popup_5137b88521629cbf81d5d37a44330aa7)
+        ;
+
+        
+    
+    
+            circle_marker_f06a560471d999dc26b1132698f893b0.bindTooltip(
+                `<div>
+                     High-High | Cases: 4.874
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba5d3b12ba8a77e72e0013b385307248 = L.circleMarker(
+                [25.974413502500056, -80.15391478819757],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_587db1a20f9b0359e5f05413318e28e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3534646f63f849131ba6280963c1b51d = $(`<div id="html_3534646f63f849131ba6280963c1b51d" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 756<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 10.26<br>             <b>Rounded Cases:</b> 10<br>             <b>Exposed Population:</b> 4065<br>             <b>Local Moran's I:</b> 3.4126<br>             <b>p-value:</b> 0.008<br>             </div>`)[0];
+                popup_587db1a20f9b0359e5f05413318e28e9.setContent(html_3534646f63f849131ba6280963c1b51d);
+            
+        
+
+        circle_marker_ba5d3b12ba8a77e72e0013b385307248.bindPopup(popup_587db1a20f9b0359e5f05413318e28e9)
+        ;
+
+        
+    
+    
+            circle_marker_ba5d3b12ba8a77e72e0013b385307248.bindTooltip(
+                `<div>
+                     High-High | Cases: 10.26
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f790533d1051fd4c8b088924534d6691 = L.circleMarker(
+                [25.993433296000063, -80.2440358191401],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_a23594f72da420afaa4c7187dad0e320 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd9064a069690579c4f1a0fe261de066 = $(`<div id="html_fd9064a069690579c4f1a0fe261de066" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 759<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.441<br>             <b>Rounded Cases:</b> 2<br>             <b>Exposed Population:</b> 967<br>             <b>Local Moran's I:</b> 0.5585<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_a23594f72da420afaa4c7187dad0e320.setContent(html_fd9064a069690579c4f1a0fe261de066);
+            
+        
+
+        circle_marker_f790533d1051fd4c8b088924534d6691.bindPopup(popup_a23594f72da420afaa4c7187dad0e320)
+        ;
+
+        
+    
+    
+            circle_marker_f790533d1051fd4c8b088924534d6691.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.441
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ef0d72b84cf67f2fdca56014a8df708 = L.circleMarker(
+                [26.089679472500052, -80.22429816345903],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_340227baf590f7d852974f055619d054 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cece1634d7ce4396b98151bbdef33a8a = $(`<div id="html_cece1634d7ce4396b98151bbdef33a8a" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 760<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 3.597<br>             <b>Rounded Cases:</b> 4<br>             <b>Exposed Population:</b> 1425<br>             <b>Local Moran's I:</b> 0.6168<br>             <b>p-value:</b> 0.017<br>             </div>`)[0];
+                popup_340227baf590f7d852974f055619d054.setContent(html_cece1634d7ce4396b98151bbdef33a8a);
+            
+        
+
+        circle_marker_4ef0d72b84cf67f2fdca56014a8df708.bindPopup(popup_340227baf590f7d852974f055619d054)
+        ;
+
+        
+    
+    
+            circle_marker_4ef0d72b84cf67f2fdca56014a8df708.bindTooltip(
+                `<div>
+                     High-High | Cases: 3.597
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecf292d5372d6b54e4c43585899ffa77 = L.circleMarker(
+                [25.73999960600005, -80.39235672381736],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_97677910d17bb2b92ac35267ac55b900 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2a553f1db94b1ca8072fc946ee77d161 = $(`<div id="html_2a553f1db94b1ca8072fc946ee77d161" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 782<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 18.022<br>             <b>Rounded Cases:</b> 18<br>             <b>Exposed Population:</b> 7140<br>             <b>Local Moran's I:</b> 6.2531<br>             <b>p-value:</b> 0.008<br>             </div>`)[0];
+                popup_97677910d17bb2b92ac35267ac55b900.setContent(html_2a553f1db94b1ca8072fc946ee77d161);
+            
+        
+
+        circle_marker_ecf292d5372d6b54e4c43585899ffa77.bindPopup(popup_97677910d17bb2b92ac35267ac55b900)
+        ;
+
+        
+    
+    
+            circle_marker_ecf292d5372d6b54e4c43585899ffa77.bindTooltip(
+                `<div>
+                     High-High | Cases: 18.022
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c81531f22efb983a9712dcd326cf4bfa = L.circleMarker(
+                [26.025716102000047, -80.13913860482144],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_5ab0e20a6c8d80686383e68346f7aa4c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_98e08f41225bf1f76d75328921021b1d = $(`<div id="html_98e08f41225bf1f76d75328921021b1d" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 794<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 7.852<br>             <b>Rounded Cases:</b> 8<br>             <b>Exposed Population:</b> 3111<br>             <b>Local Moran's I:</b> 2.0696<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_5ab0e20a6c8d80686383e68346f7aa4c.setContent(html_98e08f41225bf1f76d75328921021b1d);
+            
+        
+
+        circle_marker_c81531f22efb983a9712dcd326cf4bfa.bindPopup(popup_5ab0e20a6c8d80686383e68346f7aa4c)
+        ;
+
+        
+    
+    
+            circle_marker_c81531f22efb983a9712dcd326cf4bfa.bindTooltip(
+                `<div>
+                     High-High | Cases: 7.852
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a9c08835fa49720982c563fbfaf9c0e = L.circleMarker(
+                [25.56825479900004, -80.34572714758232],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_af4f66b841c3b4e35e8af11bff2d5d41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7421d59cea1cce29795a0a2718b6d326 = $(`<div id="html_7421d59cea1cce29795a0a2718b6d326" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 795<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 11.969<br>             <b>Rounded Cases:</b> 12<br>             <b>Exposed Population:</b> 4742<br>             <b>Local Moran's I:</b> 4.0464<br>             <b>p-value:</b> 0.008<br>             </div>`)[0];
+                popup_af4f66b841c3b4e35e8af11bff2d5d41.setContent(html_7421d59cea1cce29795a0a2718b6d326);
+            
+        
+
+        circle_marker_5a9c08835fa49720982c563fbfaf9c0e.bindPopup(popup_af4f66b841c3b4e35e8af11bff2d5d41)
+        ;
+
+        
+    
+    
+            circle_marker_5a9c08835fa49720982c563fbfaf9c0e.bindTooltip(
+                `<div>
+                     High-High | Cases: 11.969
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8a3a65a0c809e2f692bc3f96bf56db6 = L.circleMarker(
+                [25.99923749550007, -80.32371673520555],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_fa16829058b9133796d6573b414a4642 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0edca02f179ea011f8536bdf98325438 = $(`<div id="html_0edca02f179ea011f8536bdf98325438" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 804<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 14.589<br>             <b>Rounded Cases:</b> 15<br>             <b>Exposed Population:</b> 5780<br>             <b>Local Moran's I:</b> 5.6782<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_fa16829058b9133796d6573b414a4642.setContent(html_0edca02f179ea011f8536bdf98325438);
+            
+        
+
+        circle_marker_f8a3a65a0c809e2f692bc3f96bf56db6.bindPopup(popup_fa16829058b9133796d6573b414a4642)
+        ;
+
+        
+    
+    
+            circle_marker_f8a3a65a0c809e2f692bc3f96bf56db6.bindTooltip(
+                `<div>
+                     High-High | Cases: 14.589
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_155ad1ec105f7ed64b46f5c6e43fb589 = L.circleMarker(
+                [25.990432623000032, -80.23859999999996],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_cd80ec73c84af468bde0779209c1f4fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6e3ec1e78c1b72e3096c75fd8e5ce74b = $(`<div id="html_6e3ec1e78c1b72e3096c75fd8e5ce74b" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 882<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 12.888<br>             <b>Rounded Cases:</b> 13<br>             <b>Exposed Population:</b> 5106<br>             <b>Local Moran's I:</b> 4.7246<br>             <b>p-value:</b> 0.007<br>             </div>`)[0];
+                popup_cd80ec73c84af468bde0779209c1f4fb.setContent(html_6e3ec1e78c1b72e3096c75fd8e5ce74b);
+            
+        
+
+        circle_marker_155ad1ec105f7ed64b46f5c6e43fb589.bindPopup(popup_cd80ec73c84af468bde0779209c1f4fb)
+        ;
+
+        
+    
+    
+            circle_marker_155ad1ec105f7ed64b46f5c6e43fb589.bindTooltip(
+                `<div>
+                     High-High | Cases: 12.888
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69acfeefafce44e92ee14877e3fc3897 = L.circleMarker(
+                [25.803801942000064, -80.18590768178495],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_b325716896e3b2f9ab76856d9726eb85 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_031ebb44f2df11525ae9da02e9d00555 = $(`<div id="html_031ebb44f2df11525ae9da02e9d00555" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 885<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 22.343<br>             <b>Rounded Cases:</b> 22<br>             <b>Exposed Population:</b> 8852<br>             <b>Local Moran's I:</b> 36.8921<br>             <b>p-value:</b> 0.001<br>             </div>`)[0];
+                popup_b325716896e3b2f9ab76856d9726eb85.setContent(html_031ebb44f2df11525ae9da02e9d00555);
+            
+        
+
+        circle_marker_69acfeefafce44e92ee14877e3fc3897.bindPopup(popup_b325716896e3b2f9ab76856d9726eb85)
+        ;
+
+        
+    
+    
+            circle_marker_69acfeefafce44e92ee14877e3fc3897.bindTooltip(
+                `<div>
+                     High-High | Cases: 22.343
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c606114bc017fc1f6090eec59965674d = L.circleMarker(
+                [26.11909401950004, -80.3274739791216],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_a4e49d5ab75f023d9acfad53d13f7ecc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f8908a37d1608e1cc0288751cbe6da0b = $(`<div id="html_f8908a37d1608e1cc0288751cbe6da0b" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 898<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 2.956<br>             <b>Rounded Cases:</b> 3<br>             <b>Exposed Population:</b> 1171<br>             <b>Local Moran's I:</b> 0.2522<br>             <b>p-value:</b> 0.034<br>             </div>`)[0];
+                popup_a4e49d5ab75f023d9acfad53d13f7ecc.setContent(html_f8908a37d1608e1cc0288751cbe6da0b);
+            
+        
+
+        circle_marker_c606114bc017fc1f6090eec59965674d.bindPopup(popup_a4e49d5ab75f023d9acfad53d13f7ecc)
+        ;
+
+        
+    
+    
+            circle_marker_c606114bc017fc1f6090eec59965674d.bindTooltip(
+                `<div>
+                     High-High | Cases: 2.956
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_efbd5e57b05570f8468e4456efad6656 = L.circleMarker(
+                [26.005711120000026, -80.18622167298903],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_802627d623589d7ec5d266735f63c23e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c9cc1974137d049abced88296f2d34fe = $(`<div id="html_c9cc1974137d049abced88296f2d34fe" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 901<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 11.416<br>             <b>Rounded Cases:</b> 11<br>             <b>Exposed Population:</b> 4523<br>             <b>Local Moran's I:</b> 3.0855<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_802627d623589d7ec5d266735f63c23e.setContent(html_c9cc1974137d049abced88296f2d34fe);
+            
+        
+
+        circle_marker_efbd5e57b05570f8468e4456efad6656.bindPopup(popup_802627d623589d7ec5d266735f63c23e)
+        ;
+
+        
+    
+    
+            circle_marker_efbd5e57b05570f8468e4456efad6656.bindTooltip(
+                `<div>
+                     High-High | Cases: 11.416
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2523a78ac1f96a4344562e0f728ee962 = L.circleMarker(
+                [25.771157166500046, -80.33076822494874],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_3c448767fc4ad581c0023740bf857ca5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1d4ac8c7fbe715c6322b575c5464b11a = $(`<div id="html_1d4ac8c7fbe715c6322b575c5464b11a" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 907<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 26.546<br>             <b>Rounded Cases:</b> 27<br>             <b>Exposed Population:</b> 10517<br>             <b>Local Moran's I:</b> 6.6842<br>             <b>p-value:</b> 0.016<br>             </div>`)[0];
+                popup_3c448767fc4ad581c0023740bf857ca5.setContent(html_1d4ac8c7fbe715c6322b575c5464b11a);
+            
+        
+
+        circle_marker_2523a78ac1f96a4344562e0f728ee962.bindPopup(popup_3c448767fc4ad581c0023740bf857ca5)
+        ;
+
+        
+    
+    
+            circle_marker_2523a78ac1f96a4344562e0f728ee962.bindTooltip(
+                `<div>
+                     High-High | Cases: 26.546
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74e77647a1586e24761cb8553454424e = L.circleMarker(
+                [26.204792181500068, -80.21658445051787],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_c33bbed9f2759e1cb8d42ce487d9fd2a);
+        
+    
+        var popup_44ba40af7ba20fff6ef8a9bcd703e124 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f65f6f5d44e5cc86f7d13da4b31cbb36 = $(`<div id="html_f65f6f5d44e5cc86f7d13da4b31cbb36" style="width: 100.0%; height: 100.0%;">             <b>Risk Zone ID:</b> 923<br>             <b>LISA Cluster:</b> High-High<br>             <b>Downscaled Cases:</b> 8.673<br>             <b>Rounded Cases:</b> 9<br>             <b>Exposed Population:</b> 3436<br>             <b>Local Moran's I:</b> 2.4086<br>             <b>p-value:</b> 0.014<br>             </div>`)[0];
+                popup_44ba40af7ba20fff6ef8a9bcd703e124.setContent(html_f65f6f5d44e5cc86f7d13da4b31cbb36);
+            
+        
+
+        circle_marker_74e77647a1586e24761cb8553454424e.bindPopup(popup_44ba40af7ba20fff6ef8a9bcd703e124)
+        ;
+
+        
+    
+    
+            circle_marker_74e77647a1586e24761cb8553454424e.bindTooltip(
+                `<div>
+                     High-High | Cases: 8.673
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
